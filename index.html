@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA SEMANA 5</title>
+    <title>Galería Interactiva </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Galería de Imágenes Interactiva</h1>
+        <p>Agrega imágenes a la galería utilizando su URL. Puedes eliminar la imagen seleccionada.</p>
+        
+        <div class="controls">
+            <input type="url" id="imageUrl" placeholder="Ingresa la URL de una imagen" required>
+            <button id="addButton">AGREGAR UNA imagen</button>
+            <button id="removeButton">Eliminar Imagen SELECIONADA</button>
+        </div>
+        
+        <div class="gallery" id="gallery"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
