@@ -49,6 +49,11 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    button::hover {
+        box-shadow:0 0 5px rgb(117, 167, 60),
+        0 0 10px cyan,0 0 50px rgb(30, 255, 0),
+        0 0 100px rgb(0, 255, 21), 0 0 200px rgb(0, 255, 55);
+    }
 }
 
 button:hover {
@@ -57,6 +62,11 @@ button:hover {
 
 button#removeButton {
     background-color: #f44336;
+    button::hover {
+        box-shadow:0 0 5px rgb(117, 167, 60),
+        0 0 10px cyan,0 0 50px rgb(30, 255, 0),
+        0 0 100px rgb(0, 255, 21), 0 0 200px rgb(0, 255, 55);
+    }
 }
 
 button#removeButton:hover {
@@ -105,18 +115,48 @@ button#removeButton:hover {
     animation: fadeIn 0.5s ease-out;
 }
 
-.gallery-item.removed {
-    animation: fadeOut 0.5s ease-out;
-    opacity: 0;
-    transform: scale(0.9);
+.gallery-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: inline-block;
 }
 
-@media (max-width: 600px) {
-    .controls {
-        flex-direction: column;
-    }
-    
-    .gallery {
-        grid-template-columns: 1fr;
-    }
+.gallery-item.selected {
+    border: 2px solid blue;
+}
+
+.image-source {
+    word-break: break-all;
+    max-width: 300px;
+}
+.image-info-box {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.image-info-box h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.image-info-box p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.image-info-box strong {
+    color: #555;
 }
